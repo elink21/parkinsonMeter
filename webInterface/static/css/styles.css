@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=KoHo:wght@300&display=swap");
+* {
+  font-family: "KoHo", sans-serif;
+  color: white !important;
+}
+
+body {
+  background: #ad5389;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#3c1053), to(#ad5389));
+  background: linear-gradient(to right, #3c1053, #ad5389);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: white;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 3fr 2fr;
+      grid-template-columns: 3fr 2fr;
+  max-height: 100vh;
+  margin: 0;
+}
+
+#graphGrid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: (1fr)[6];
+      grid-template-rows: repeat(6, 1fr);
+}
+
+#controlsDiv {
+  padding: 10px;
+  text-align: center;
+}
+
+#controlsDiv span {
+  font-size: 40px;
+}
+
+#controlsDiv .value {
+  font-size: 50px;
+  font-weight: bolder;
+}
+
+.chart {
+  max-height: 100px;
+}
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,48 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <title>Parkinson interface</title>
+  </head>
+  <body>
+    <div id="graphGrid">
+      <div class="graph">
+        <canvas class="chart" id="chart0"></canvas>
+      </div>
+      <div class="graph">
+        <canvas class="chart" id="chart1"></canvas>
+      </div>
+      <div class="graph">
+        <canvas class="chart" id="chart2"></canvas>
+      </div>
+      <div class="graph"><canvas class="chart" id="chart3"></canvas></div>
+      <div class="graph"><canvas class="chart" id="chart4"></canvas></div>
+      <div class="graph"><canvas class="chart" id="chart5"></canvas></div>
+    </div>
+
+    <div id="controlsDiv">
+      <span class="material-icons"> waving_hand </span>
+      <h1>Parkinson tremor's meter</h1>
+
+      <p class="value">32</p>
+      <h3>Mean variation per second</h3>
+
+      <p class="value">LOW</p>
+      <h3>Overall tremor level</h3>
+
+
+    </div>
+
+    <script src="{%static 'js/charts.js'%}"></script>
+  </body>
+</html>

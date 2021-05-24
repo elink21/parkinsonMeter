@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=KoHo:wght@300&display=swap");
+* {
+  font-family: "KoHo", sans-serif;
+  color: white !important;
+}
+
+body {
+  background: #ad5389; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #3c1053,
+    #ad5389
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #3c1053,
+    #ad5389
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color:white;
+
+
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  max-height: 100vh;
+  margin: 0;
+}
+
+#graphGrid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6,1fr);
+
+}
+
+#controlsDiv{
+    span{
+        font-size: 40px;
+    }
+
+    .value{
+        font-size: 50px;
+        font-weight: bolder;
+
+    }
+    padding:10px;
+    text-align: center;
+}
+
+.chart{
+    max-height: 100px;
+}
