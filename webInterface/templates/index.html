@@ -12,6 +12,12 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+
     <title>Parkinson interface</title>
   </head>
   <body>
@@ -27,7 +33,6 @@
       </div>
       <div class="graph"><canvas class="chart" id="chart3"></canvas></div>
       <div class="graph"><canvas class="chart" id="chart4"></canvas></div>
-      <div class="graph"><canvas class="chart" id="chart5"></canvas></div>
     </div>
 
     <div id="controlsDiv">
@@ -39,8 +44,6 @@
 
       <p class="value">LOW</p>
       <h3>Overall tremor level</h3>
-
-
     </div>
 
     <script src="{%static 'js/charts.js'%}"></script>

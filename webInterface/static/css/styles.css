@@ -25,8 +25,8 @@ body {
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: (1fr)[6];
-      grid-template-rows: repeat(6, 1fr);
+  -ms-grid-rows: (1fr)[5];
+      grid-template-rows: repeat(5, 1fr);
 }
 
 #controlsDiv {
@@ -44,6 +44,6 @@ body {
 }
 
 .chart {
-  max-height: 100px;
+  max-height: 120px;
 }
 /*# sourceMappingURL=styles.css.map */

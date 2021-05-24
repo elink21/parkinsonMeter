@@ -28,7 +28,7 @@ body {
 #graphGrid{
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(6,1fr);
+    grid-template-rows: repeat(5,1fr);
 
 }
 
@@ -47,5 +47,5 @@ body {
 }
 
 .chart{
-    max-height: 100px;
+    max-height: 120px;
 }

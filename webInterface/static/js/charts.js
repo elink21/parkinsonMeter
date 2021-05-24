@@ -1,6 +1,6 @@
-let sensorsData = [[0], [0], [0], [0], [0], [0]];
+let sensorsData = [[0], [0], [0], [0], [0]];
 let second = 0;
-let myCharts=[];
+let myCharts = [];
 Chart.defaults.color = "white";
 const palette = [
     '#0c0c0c',
@@ -22,7 +22,7 @@ function addData(chart, label, data) {
 
 
 
-for (let i = 0; i < 6; i++) {
+for (let i = 0; i < 5; i++) {
 
     let labels = [
         0];
@@ -42,7 +42,7 @@ for (let i = 0; i < 6; i++) {
     data.datasets[0].label = `Sensor #${i}`
     data.datasets[0].backgroundColor = palette[i];
     data.datasets[0].borderColor = palette[i];
-    
+
 
     myCharts.push(new Chart(
         document.getElementById(`chart${i}`),
@@ -53,11 +53,17 @@ for (let i = 0; i < 6; i++) {
 
 
 setInterval(() => {
-    for(let i=0;i<6;i++)
-    {
-        addData(myCharts[i], second, Math.random()*200);
-    }
-   
-    console.log("finished", second);
+
+    $.ajax({
+        url: 'requestSample',
+        data: [],
+        success: data => {
+            console.log(data);
+            for (let i = 0; i < 5; i++) {
+                addData(myCharts[i], second, data.data[i]);
+            }
+        }
+    })
+
     second += 1;
 }, 1000)
