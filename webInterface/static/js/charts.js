@@ -1,6 +1,8 @@
 let sensorsData = [[0], [0], [0], [0], [0]];
 let second = 0;
 let myCharts = [];
+let isFirstTime = true;
+let threshold = 0;
 Chart.defaults.color = "white";
 const palette = [
     '#0c0c0c',
@@ -58,9 +60,36 @@ setInterval(() => {
         url: 'requestSample',
         data: [],
         success: data => {
-            console.log(data);
+            let sum = 0;
+            let variationSum = 0;
+
             for (let i = 0; i < 5; i++) {
+                sum += data.data[i];
+                if (data.data[i] < threshold) {
+                    variationSum += threshold - data.data[i];
+                }
                 addData(myCharts[i], second, data.data[i]);
+            }
+            if (isFirstTime) {
+                threshold = sum / 5;
+                document.getElementById('threshold').innerHTML = threshold;
+                isFirstTime = false;
+           
+            } else if (!isFirstTime) {
+                let meanSum =(variationSum / 5);
+                let level= ''
+                document.getElementById('mean').innerHTML = meanSum.toFixed(2);
+
+                if(meanSum<20)
+                { 
+                    level='LOW';
+                }
+                else if (meanSum<60){
+                    level='MEDIUM';
+                } else{
+                    level='HIGH';
+                }
+                document.getElementById('tremorLevel').innerHTML=level;
             }
         }
     })

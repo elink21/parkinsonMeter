@@ -35,11 +35,11 @@ body {
 }
 
 #controlsDiv span {
-  font-size: 40px;
+  font-size: 20px;
 }
 
 #controlsDiv .value {
-  font-size: 50px;
+  font-size: 40px;
   font-weight: bolder;
 }
 
